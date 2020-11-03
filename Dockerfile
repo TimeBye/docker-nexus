@@ -63,7 +63,7 @@ RUN sed -i -e 's|<maxHistory>90</maxHistory>|<maxHistory>30</maxHistory>|g' ${NE
 
 # Copy runnable script
 COPY run /etc/service/nexus/run
-
+RUN chmod 755 /etc/service/nexus/run
 VOLUME ${NEXUS_DATA}
 
 EXPOSE 8081
